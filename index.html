@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+    <!-- jquery -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <title>Somewhere In The Platform</title>
+</head>
+<body>
+    <div id="board" class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-12">
+
+                <div class="card">
+                    <div class="top_info">
+                        <div class="label"><i class="far fa-heart"></i> LIFESPAN SURVIVAL</div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm detail">View details</button>
+                    </div>
+
+                    <div class="row">
+                        <!-- Canvas Area -->
+                        <div class="col-8">
+                            <canvas id="survival_canvas"></canvas>
+                        </div>
+                        <!-- SideBar -->
+                        <div class="col-4">
+                            <div class="side">
+                                <div class="blob blob11">
+                                    <div class="display_data" style="color:#027b8d">423</div>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">High Risk</button>
+                                </div>
+                                <div class="blob blob22">
+                                    <div class="display_data" style="color:#18bd9f">&#xa5;20M</div>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">Potential UPP <i class="fas fa-question-circle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-12">
+                <div class="card"><img src="./img/DAU.png"></div>
+            </div>
+
+            <div class="col-xl-6 col-lg-12">
+                <div class="card">
+
+                    <div class="top_info">
+                        <div class="label"><img id="pop-icon" src="./img/population.png"> GAME STATUS</div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm detail">View details</button>
+                    </div>
+
+                    <div class="row">
+                        <!-- Canvas Area -->
+                        <div class="col-8">
+                            <div id="game_status">
+                                <div id="vip" class="status_row">
+                                    <div id="vip_desc" class="status_desc">
+                                        <p class="sm_header">VIP Users</p>
+                                        <p class="status_content">Total individual sales more than &#xa5;40K</p>
+                                    </div>
+                                    <div class="status_chart">
+                                        <canvas width="0" height="0" id="vip_chart"> </canvas>
+                                    </div>
+                                </div>
+
+                                <div id="paying" class="status_row">
+                                    <div id="paying_desc" class="status_desc">
+                                        <p class="sm_header">Paying Users</p>
+                                        <p class="status_content">(excluding VIP) Total individual sales less than &#xa5;40K</p>
+                                    </div>
+
+                                    <div  class="status_chart">
+                                        <canvas width="0" height="0" id="paying_chart"> </canvas>
+                                    </div>
+                                </div>
+
+                                <div id="free" class="status_row">
+                                    <div id="free_desc" class="status_desc">
+                                        <p class="sm_header">Non-Paying Users</p>
+                                        <p class="status_content">Total individual sales is zero</p>
+                                    </div>
+
+                                    <div class="status_chart">
+                                        <canvas width="0" height="0" id="free_chart"> </canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SideBar -->
+                        <div class="col-4">
+                            <div class="side">
+                                <div class="blob blob1">
+                                    <div class="display_data" style="color:#00c7af">
+                                        <i class="fas fa-heart"></i> 69.75%
+                                    </div>
+                                    <div>Game Health</div>
+                                </div>
+                                <div class="blob blob2">
+                                    <div class="display_data" style="color:#027b8d">&#xa5;1.8B</div>
+                                    <div>Total Sales</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-12">
+                <div class="card"><img src="./img/event.png"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./script/bar.js"></script>
+    <script type="text/javascript" src="./script/circle.js"></script>
+    <script type="text/javascript" src="./script/script.js"></script>
+</body>
+</html>
